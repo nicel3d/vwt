@@ -5,7 +5,7 @@ module.exports = {
   //   enabled: true,
   //   content: ["*.html", "./assets/js/main.js"],
   // },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media",
   theme: {
     screens: {
       sm: "540px",

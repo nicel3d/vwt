@@ -285,7 +285,7 @@ button {
   max-width: 405px;
 }
 .single_team {
-  @apply shadow rounded-xl my-8 overflow-hidden bg-white transition-all duration-300 group hover:bg-theme-color;
+  @apply shadow rounded-xl my-8 overflow-hidden bg-white transition-all duration-300 hover:bg-theme-color;
 }
 .team_image .social li {
   @apply mt-4 opacity-0 invisible transform translate-x-full;
@@ -321,7 +321,7 @@ button {
 }
 
 .single_pricing {
-  @apply border-2 border-dashed border-border-color rounded-xl p-6 md:p-10 transition-all duration-300 group hover:border-theme-color hover:shadow;
+  @apply border-2 border-dashed border-border-color rounded-xl p-6 md:p-10 transition-all duration-300 hover:border-theme-color hover:shadow;
 }
 .single_pricing.active {
   @apply border-theme-color shadow;

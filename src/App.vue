@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const modalOpen = ref(false);
+</script>
 
 <template>
   <div>
@@ -1629,5 +1633,54 @@
         </div>
     </section>
 -->
+
+    <section>
+      <div class="container py-20">
+        <button
+          class="py-3 px-6 rounded-full bg-primary text-white font-medium text-base"
+          @click="modalOpen = true"
+        >
+          Open Modal
+        </button>
+      </div>
+      <div
+        v-if="modalOpen"
+        class="bg-black bg-opacity-90 fixed top-0 left-0 w-full min-h-screen h-full flex items-center justify-center px-4 py-5 z-50"
+        @click.self="modalOpen = false"
+      >
+        <div
+          class="w-full max-w-[570px] rounded-[20px] bg-white py-12 px-8 md:py-[60px] md:px-[70px] text-center"
+        >
+          <h3 class="font-bold text-dark text-xl sm:text-2xl pb-2">
+            Your Message Sent Successfully
+          </h3>
+          <span
+            class="inline-block bg-primary h-1 w-[90px] mx-auto rounded mb-6"
+          ></span>
+          <p class="text-base text-body-color leading-relaxed mb-10">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since
+          </p>
+          <div class="flex flex-wrap -mx-3">
+            <div class="w-1/2 px-3">
+              <button
+                class="block text-center w-full p-3 text-base font-medium rounded-lg text-dark border border-[#E9EDF9] hover:bg-red-600 hover:text-white hover:border-red-600 transition"
+                @click="modalOpen = false"
+              >
+                Cancel
+              </button>
+            </div>
+            <div class="w-1/2 px-3">
+              <button
+                class="block text-center w-full p-3 text-base font-medium rounded-lg bg-primary text-white border border-primary hover:bg-opacity-90 transition"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
